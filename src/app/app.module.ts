@@ -1,13 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-<<<<<<< HEAD
 import{FormsModule} from '@angular/forms';
 import{HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
-
-=======
-import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
->>>>>>> 769ba6f314b6f8fde79e5f53f048c9875091d588
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
