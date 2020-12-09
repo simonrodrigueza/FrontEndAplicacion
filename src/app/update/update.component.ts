@@ -20,10 +20,6 @@ export class UpdateComponent implements OnInit {
       Validators.required,
       Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
     ]),
-    number: new FormControl('', [
-      Validators.required,
-      Validators.pattern(/^[0-9]{1,11}$/),
-    ]),
     phone: new FormControl('',[
       Validators.required,
       Validators.pattern(/^-?(0|[1-9]\d*)?$/)
