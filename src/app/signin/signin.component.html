@@ -4,7 +4,7 @@
             Iniciar sesión
         </div>
         <div class="card-body">
-            <form (submit)="signIn()" style="margin-top:0 auto;">
+            <form (submit)="signIn()">
                 <div class="form-group">
                     <label for="email">Correo:</label>
                     <input type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Ingrese el correo" required autofocus>

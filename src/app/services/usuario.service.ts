@@ -11,7 +11,7 @@ export class UsuarioService {
   constructor(private http: HttpClient,
               private router:Router) { }
 
-  getEmpleado(userId){
+  getUsuario(userId){
     return this.http.get<any>(this.URL + 'usuario/id_user/'+userId); // devuelve un observable
   }
   update(user, userID){

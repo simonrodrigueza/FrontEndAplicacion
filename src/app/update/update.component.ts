@@ -46,7 +46,7 @@ export class UpdateComponent implements OnInit {
               private readonly dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.usuarioService.getEmpleado(this.userID)
+    this.usuarioService.getUsuario(this.userID)
       .subscribe(
         res=>{
           console.log(res);
