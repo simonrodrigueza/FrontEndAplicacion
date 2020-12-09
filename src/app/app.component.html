@@ -9,15 +9,16 @@
 
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav" style="margin-bottom: 50px;">
           <div class="container">
-              <a class="navbar-brand js-scroll-trigger" routerLink="/" routerLinkActive="active" (click)="isLoginOn= true && isSignUpOn=true">PrestaFácil</a>
+              <a class="navbar-brand js-scroll-trigger" routerLink="/" routerLinkActive="active">PrestaFácil</a>
               <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                   Menu
                   <i class="fas fa-bars"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav ml-auto">
-                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  routerLink="/signin" routerLinkActive="active" (click)="isLoginOn = false">Ingresar</a></li>
-                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/signup" routerLinkActive="active" (click)="isSignUpOn = false">Registrarse</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"  routerLink="/signin" routerLinkActive="active" >Ingresar</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/signup" routerLinkActive="active" >Registrarse</a></li>
+                      <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/update" routerLinkActive="active">Actualizar Datos</a></li>
                   </ul>
               </div>
           </div>
@@ -29,8 +30,6 @@
 <!-- Core JS-->
 <script src="./assets/js/headerjs.js"></script>
 </nav>
-<app-landingpage *ngIf="isLoginOn && isSignUpOn"></app-landingpage>
-
 <router-outlet></router-outlet>
 
 

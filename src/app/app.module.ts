@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { UpdateComponent } from './update/update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingpageComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { SignupComponent } from './signup/signup.component';
   exports: [
     LandingpageComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    UpdateComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
