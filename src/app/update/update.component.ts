@@ -13,7 +13,7 @@ import { InfoDialogComponent } from '../info-dialog/info-dialog.component';
 })
 export class UpdateComponent implements OnInit {
   text = "Ese correo ya está asociado a otro usuario";
-
+  text2= "Datos actualizados exitosamente";
   userID=localStorage.getItem('myId');
   validatorGroup = new FormGroup({
     email: new FormControl('', [
@@ -82,20 +82,22 @@ export class UpdateComponent implements OnInit {
         res =>{
           // guarde token en el local storage
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/update']);
+          this.openDialog(this.text2);
+          this.router.navigate(['/update'])
+
 
         },
-        err => this.openDialog() //err
+        err => this.openDialog(this.text) //err
 
     )
   }
-  openDialog() {
+  openDialog(text1) {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.minWidth = '350px';
     dialogConfig.maxWidth = '600px';
 
     dialogConfig.data = {
-      msg: this.text,
+      msg: text1,
     };
     this.dialog.open(InfoDialogComponent, dialogConfig).afterClosed().subscribe((success) => {
     },
