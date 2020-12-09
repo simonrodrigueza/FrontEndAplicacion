@@ -25,10 +25,12 @@ export class UpdateComponent implements OnInit {
       Validators.pattern(/^-?(0|[1-9]\d*)?$/)
     ]),
     names: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$')
     ]),
     nicknames: new FormControl('', [
-      Validators.required
+      Validators.required,
+      Validators.pattern('^[A-Za-zñÑáéíóúÁÉÍÓÚ ]+$')
     ]),
   });
   user = {
