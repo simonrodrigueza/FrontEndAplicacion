@@ -49,12 +49,13 @@ export class UpdateComponent implements OnInit {
     this.usuarioService.getUsuario(this.userID)
       .subscribe(
         res=>{
-          console.log(res);
-          this.user.names=res['users'][0]['names'];
-          this.user.email=res['users'][0]['email'];
-          this.user.phone=res['users'][0]['phone'];
-          this.user.nicknames=res['users'][0]['nicknames'];
+          this.user.names=res['usuario'][0]['names'];
+
+          this.user.email=res['usuario'][0]['email'];
+          this.user.phone=res['usuario'][0]['phone'];
+          this.user.nicknames=res['usuario'][0]['nicknames'];
         },
+
         err=>console.log("error al recibir empleado",this.userID) //err
       )
   }
