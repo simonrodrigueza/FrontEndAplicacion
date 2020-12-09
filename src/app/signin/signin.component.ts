@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from  '../services/auth.service';
+import { AuthService } from '../services/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
@@ -27,10 +27,8 @@ export class SigninComponent implements OnInit {
           this.error=false;
           localStorage.setItem('token', res.token);
           localStorage.setItem('myId',res.id);
-
-          this.router.navigate(['/private']);
-
-        }
+          this.router.navigate(['/landingpage']);
+          }
           else{
             this.error=true;
           }
@@ -38,8 +36,6 @@ export class SigninComponent implements OnInit {
         },
         err =>this.error=true
       )
-
-
   }
 
 }

@@ -4,7 +4,7 @@
             Iniciar sesión
         </div>
         <div class="card-body">
-            <form style="margin-top:0 auto;">
+            <form (submit)="signIn()" style="margin-top:0 auto;">
                 <div class="form-group">
                     <label for="email">Correo:</label>
                     <input type="text" [(ngModel)]="user.email" name="email" class="form-control" placeholder="Ingrese el correo" required autofocus>
@@ -16,7 +16,7 @@
                 <button type="submit" class="btn btn-primary btn-block">
                     Iniciar sesión
                 </button>
-                <label style="color:red; text-align: center;"> Verifique usuario y contraseña</label>
+                <label *ngIf="error" style="color:red; text-align: center;"> Verifique usuario y contraseña</label>
             </form>
         </div>
     </div>
