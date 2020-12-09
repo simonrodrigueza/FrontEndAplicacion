@@ -12,10 +12,34 @@ export class SigninComponent implements OnInit {
     email:'',
     password:''
   }
-
+  error=false;
   constructor(private authService: AuthService,
               private router:Router) { }
   ngOnInit(): void {
+  }
+
+  signIn(){
+    this.authService.signIn(this.user)
+      .subscribe(
+        res =>{
+          //console.log(res);
+          if(res.message=="accedido"){
+          this.error=false;
+          localStorage.setItem('token', res.token);
+          localStorage.setItem('myId',res.id);
+
+          this.router.navigate(['/private']);
+
+        }
+          else{
+            this.error=true;
+          }
+
+        },
+        err =>this.error=true
+      )
+
+
   }
 
 }
