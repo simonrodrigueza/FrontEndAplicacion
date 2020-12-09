@@ -8,14 +8,16 @@
                 <form (submit)="onSubmit()" [formGroup]="validatorGroup">
                     <div class="form-group">
                         <label for="names">Nombres:</label>
-                        <input type='text' [class.is-invalid]="validatorGroup.get('names').invalid && validatorGroup.get('names').touched" [(ngModel)]="user.names" name="names" class="form-control" placeholder="Nombre" formControlName="names" autofocus>
+                        <input disabled [class.is-invalid]="validatorGroup.get('names').invalid && validatorGroup.get('names').touched" type="text" [(ngModel)]="user.names" name="names" class="form-control" formControlName="names" autofocus>
+
                         <div *ngIf="(names.invalid && names.touched) || names.dirty">
                             <small *ngIf="names.errors?.required" class="text-danger">El nombre es requerido</small>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="nicknames">Apellidos:</label>
-                        <input type='text' [class.is-invalid]="validatorGroup.get('nicknames').invalid && validatorGroup.get('nicknames').touched" [(ngModel)]="user.nicknames" name="nicknames" class="form-control" placeholder="Apellidos" formControlName="nicknames" autofocus>
+                        <input disabled type='text' [class.is-invalid]="validatorGroup.get('nicknames').invalid && validatorGroup.get('nicknames').touched" [(ngModel)]="user.nicknames" name="nicknames" class="form-control" placeholder="Apellidos" formControlName="nicknames"
+                            autofocus>
                         <div *ngIf="(nicknames.invalid && nicknames.touched) || nicknames.dirty">
                             <small *ngIf="nicknames.errors?.required" class="text-danger">El Apellido es requerido</small>
                         </div>
