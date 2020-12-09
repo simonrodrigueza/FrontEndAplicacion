@@ -27,7 +27,8 @@ export class SigninComponent implements OnInit {
           this.error=false;
           localStorage.setItem('token', res.token);
           localStorage.setItem('myId',res.id);
-          this.router.navigate(['/landingpage']);
+          localStorage.setItem('names',res.names);
+          this.router.navigate(['/update']);
           }
           else{
             this.error=true;
